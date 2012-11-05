@@ -21,7 +21,7 @@ void loop()
   // LM35 temperature sensor input
   int value = analogRead(inputPin);
   float millivolts = (value / 1024.0) * 5000;
-  float celsius = millivolts / 10;
+  float celsius = millivolts / 10; // LM35 sensor output is 10mV per degree Celsius
   // convert to fahrenheit
   float fahrenheit = (celsius * 9)/ 5 + 32;
   
