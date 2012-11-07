@@ -8,7 +8,7 @@ while 1:
 
     the_goods = ser.readline()
 
-    f = open('/home/spustay/sensor_data.txt','a') // put your path here
+    f = open('/home/spustay/sensor_data.txt','a') # put your path here
     f.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' ' + the_goods)
     f.close()
 
