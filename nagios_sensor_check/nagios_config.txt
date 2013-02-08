@@ -1,0 +1,22 @@
+# On your nagios plugins directory, which on Nagios3 on Ubuntu 12 is 
+# located on /etc/nagios-plugins/config
+# make a file named arduino_temp_sensor.cfg and put this into it
+
+define command{
+	command_name	arduino_temp_sensor
+	command_line	/YOUR_PATH_TO_FILE/sensor_status.py  # chmod +x sensor_status.py
+	}
+ 
+
+# On your Nagios Server, add this to the localhost config
+# On Nagios3 and Ubuntu 12, this is in /etc/nagios3/conf.d/localhost_nagios2.cfg
+define service{
+        use                             generic-service         ; Name of service template to use
+        host_name                       localhost
+        service_description             Arduino Temperature
+        check_command                   arduino_temp_sensor
+        }
+
+
+
+
