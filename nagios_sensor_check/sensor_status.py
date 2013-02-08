@@ -10,6 +10,8 @@ dbname = 'DB_NAME'
 dbuser = 'DB_USER'
 dbpass = 'DB_PASSWORD'
 
+# Make sure this file is executable. You should chmod +x sensor_status.py
+
 def main():
     
     mysql_datetime = ""
