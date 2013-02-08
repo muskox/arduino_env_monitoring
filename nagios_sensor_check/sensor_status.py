@@ -35,7 +35,7 @@ def main():
     timediff = datetime.datetime.now() - mysql_datetime
     
     if int(timediff.total_seconds()) < 15:
-        print "Temp Sensor was %s Fahrenheit and checked only %s seconds ago" % (str(current_temp), str(timediff.total_seconds()))
+        print "Shed was %s Fahrenheit and checked only %s seconds ago" % (str(current_temp), str(timediff.total_seconds()))
         sys.exit(0)
     else:
         sys.exit(2)

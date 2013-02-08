@@ -13,7 +13,7 @@ define command{
 define service{
         use                             generic-service         ; Name of service template to use
         host_name                       localhost
-        service_description             Arduino Temperature
+        service_description             Shed Temperature
         check_command                   arduino_temp_sensor
         }
 
